@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca ZiulPlayer</title>
+    <meta name="description" content="Biblioteca unificada de guias em PDF, modpacks, videoaulas e suporte ao criador ZiulPlayer." />
+    <meta property="og:title" content="Biblioteca ZiulPlayer" />
+    <meta property="og:description" content="Biblioteca unificada de guias em PDF, modpacks, videoaulas e suporte ao criador ZiulPlayer." />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- 
+    =============================================================================
+    ÁREA DE CONFIGURAÇÃO RÁPIDA (TEMPLATES DE CONTEÚDO) - ZIULPLAYER
+    =============================================================================
+    Instruções para você criar novos itens copiando e colando:
+
+    1. CRIAR NOVO GUIA / MOD EM PDF (COM BOTÃO 'ABRIR' E BOTÃO 'AULAS'):
+       Copie o bloco do TEMPLATE 1 abaixo e cole dentro da lista "products: [ ... ]".
+       Altere o id, título, descrição, link do PDF (pdfUrl) e adicione as aulas.
+
+    2. CRIAR NOVO MODPACK (COM BOTÃO 'BAIXAR MODPACK'):
+       Copie o bloco do TEMPLATE 2 abaixo e cole dentro da lista "products: [ ... ]".
+       Altere o id, título, descrição e coloque o link do download (driveUrl).
+
+    3. CRIAR NOVO MOD TRADUZIDO (COM BOTÃO 'BAIXAR MOD'):
+       Copie o bloco do TEMPLATE 3 abaixo e cole dentro da lista "products: [ ... ]".
+       Altere o nome (ou title), versão, imagem e link de download (downloadUrl ou download).
+
+    4. CRIAR NOVA VIDEOAULA DENTRO DE UM GUIA/MOD:
+       Copie o bloco do TEMPLATE 4 abaixo e cole dentro de "lessons: [ ... ]".
+       Altere o videoUrl pelo link do vídeo (.mov ou .mp4), nome da aula e descrição.
+    =============================================================================
+    -->
+    <script id="ziul-site-data">
+      window.ZIUL_CUSTOM_DATA = {
+        products: [
+          /* =======================================================================
+             TEMPLATE 1: GUIA / MOD EM PDF (COM BOTÕES 'ABRIR' E 'AULAS')
+             (Copie deste ponto até a vírgula final e cole para adicionar mais guias)
+             ======================================================================= */
+          {
+            id: "guia-template1",
+            title: "Ars Nouveau: Do Zero ao Avançado",
+            description: "",
+            longDescription: "",
+            category: "guia", // 'guia' ativa o botão 'Abrir' (PDF) e o botão 'Aulas'
+            lessonsEnabled: false, // true = botão 'Aulas' habilitado | false = desabilitado
+            imageUrl: "img/ars.png", // Imagem de capa
+            pdfUrl: "pdfs/ars.pdf", // Link ou arquivo do PDF
+            version: "(Minecraft 1.20.1)",
+            requirements: "Minecraft Java Edition",
+            lessons: [
+              /* ===================================================================
+                 TEMPLATE 3: VIDEOAULA (COPIE E COLE PARA ADICIONAR MAIS AULAS)
+                 =================================================================== */
+              {
+                id: "aula-1",
+                title: "Aula 1: Introdução e Primeiros Passos",
+                duration: "12:45",
+                description: "Aprenda os conceitos fundamentais para iniciar sua jornada nos mods com segurança.",
+                videoUrl: "https://res.cloudinary.com/gqcegknd/video/upload/v1783796382/Intro_3_kopdiv.mov"
+              }
+              /* COPIE E COLE MAIS AULAS AQUI SE QUISER:
+              ,
+              {
+                id: "aula-2",
+                title: "Aula 2: Nome da Nova Aula",
+                duration: "15:00",
+                description: "Descrição detalhada do que você vai ensinar nesta aula.",
+                videoUrl: "https://res.cloudinary.com/gqcegknd/video/upload/v1783796382/Intro_3_kopdiv.mov"
+              }
+              */
+            ]
+          },
+          {
+            id: "guia-template2",
+            title: "AvaratiaNeo: Do Zero ao Avançado",
+            description: "",
+            longDescription: "",
+            category: "guia", // 'guia' ativa o botão 'Abrir' (PDF) e o botão 'Aulas'
+            lessonsEnabled: false, // true = botão 'Aulas' habilitado | false = desabilitado
+            imageUrl: "img/avaritia.png", // Imagem de capa
+            pdfUrl: "pdfs/avaritia.pdf", // Link ou arquivo do PDF
+            version: "(Minecraft 1.20.1)",
+            requirements: "Minecraft Java Edition",
+            lessons: [
+              /* ===================================================================
+                 TEMPLATE 3: VIDEOAULA (COPIE E COLE PARA ADICIONAR MAIS AULAS)
+                 =================================================================== */
+              {
+                id: "aula-1",
+                title: "Aula 1: Introdução e Primeiros Passos",
+                duration: "12:45",
+                description: "Aprenda os conceitos fundamentais para iniciar sua jornada nos mods com segurança.",
+                videoUrl: "https://res.cloudinary.com/gqcegknd/video/upload/v1783796382/Intro_3_kopdiv.mov"
+              }
+              /* COPIE E COLE MAIS AULAS AQUI SE QUISER:
+              ,
+              {
+                id: "aula-2",
+                title: "Aula 2: Nome da Nova Aula",
+                duration: "15:00",
+                description: "Descrição detalhada do que você vai ensinar nesta aula.",
+                videoUrl: "https://res.cloudinary.com/gqcegknd/video/upload/v1783796382/Intro_3_kopdiv.mov"
+              }
+              */
+            ]
+          },
+          {
+            id: "guia-template3",
+            title: "ProjectE: Do Zero ao Avançado",
+            description: "",
+            longDescription: "",
+            category: "guia", // 'guia' ativa o botão 'Abrir' (PDF) e o botão 'Aulas'
+            lessonsEnabled: false, // true = botão 'Aulas' habilitado | false = desabilitado
+            imageUrl: "img/projectE.png", // Imagem de capa
+            pdfUrl: "pdfs/projectE.pdf", // Link ou arquivo do PDF
+            version: "(Minecraft 1.20.1)",
+            requirements: "Minecraft Java Edition",
+            lessons: [
+              /* ===================================================================
+                 TEMPLATE 3: VIDEOAULA (COPIE E COLE PARA ADICIONAR MAIS AULAS)
+                 =================================================================== */
+              {
+                id: "aula-1",
+                title: "Aula 1: Introdução e Primeiros Passos",
+                duration: "12:45",
+                description: "Aprenda os conceitos fundamentais para iniciar sua jornada nos mods com segurança.",
+                videoUrl: "https://res.cloudinary.com/gqcegknd/video/upload/v1783796382/Intro_3_kopdiv.mov"
+              }
+              /* COPIE E COLE MAIS AULAS AQUI SE QUISER:
+              ,
+              {
+                id: "aula-2",
+                title: "Aula 2: Nome da Nova Aula",
+                duration: "15:00",
+                description: "Descrição detalhada do que você vai ensinar nesta aula.",
+                videoUrl: "https://res.cloudinary.com/gqcegknd/video/upload/v1783796382/Intro_3_kopdiv.mov"
+              }
+              */
+            ]
+          },
+
+          /* =======================================================================
+             TEMPLATE 2: MODPACK (COM BOTÃO 'BAIXAR MODPACK')
+             (Copie deste ponto até a vírgula antes do próximo item para adicionar)
+             ======================================================================= */
+          //  {
+          //    id: "modpack-template1",
+          //    title: "Modpack Oficial: Create Chronicles (Template)",
+          //    description: "Automatize tudo! Um modpack oficial focado em engenharia mecânica, trens funcionais e energia a vapor.",
+          //    longDescription: "Prepare-se para entrar na era industrial do Minecraft! Modpack completo com instalador automático e configurado para alto desempenho.",
+          //    category: "modpack", // 'modpack' ativa o botão 'Baixar Modpack'
+          //    lessonsEnabled: false,
+          //    imageUrl: "img/create_modpack_cover_1783703835561.jpg", // Imagem de capa
+          //    driveUrl: "https://drive.google.com/drive/folders/your-placeholder-id-here", // Link do Google Drive ou Download direto
+          //    pdfUrl: "Modpack_Installation_Guide.pdf",
+          //    version: "v2.0.1 (Minecraft 1.20.1 - Forge)",
+          //    requirements: "Mínimo 6GB de RAM dedicada no Launcher",
+          //    lessons: []
+          //  },
+
+          /* =======================================================================
+             TEMPLATE 3: MOD TRADUZIDO (COM BOTÃO 'BAIXAR MOD')
+             (Copie deste ponto até o fechamento para adicionar mais mods traduzidos)
+             Você também pode usar as chaves em português: { nome, imagem, versao, download, categoria: "mods-traduzidos" }
+             ======================================================================= */
+           {
+             id: "upgrader",
+             title: "Upgrader Items",
+             category: "mods-traduzidos", // 'mods-traduzidos' ativa o card limpo com botão 'Baixar Mod'
+             imageUrl: "img/ars_nouveau_mod_1789612326631.jpg", // Imagem de arte do mod
+             version: "Minecraft 1.20.1", // Versão do mod
+             downloadUrl: "https://drive.google.com/file/d/1ekuFrkvBuZD5DkTGTtal5OagklgVe6-Z/view?usp=sharing" // Link de download do mod
+           }
+        ]
+      };
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
